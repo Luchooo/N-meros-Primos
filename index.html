@@ -1,10 +1,4 @@
 N-meros-Primos
-==============
-Trabajos
-========
-
-Vida en JS - HTML
-
 
  <!--Universidad de Cundinamarca 
  Extensión Chía
@@ -27,7 +21,7 @@ Vida en JS - HTML
 	<meta charset="UTF-8">
 
 	<!--Titulo de la Pagina Web-->
-	<title>Serie Fibonacci</title>
+	<title>Numeros Primos</title>
 
 
 <!---SCRIP-->
@@ -48,59 +42,91 @@ Vida en JS - HTML
 
 
 
-/////////////////////////SERIE FIBONACCI/////////////////////////////////////////////////////
+/////////////////////////NÚMERO PRIMOS/////////////////////////////////////////////////////
 
 /////////////DECLARACIÓN DE VARIABLES///////////////////////////////////////////////
-var a=0; 
-var b=1; 
-var c; 
-var i; 
-var x; 
+var contador=2; //Contador en 2 Ya que cualquier número es divisible por 1 y por el mismo
+var x; //Variable para guardar el número digitado por el usuario.
+
 
 //______________________________________________________________________________________
 
+///////////////////ASIGNACIÓN DE VARIABLES/////////////////////////
 
 
-//////////Solicitar Posición de Serie Fibonacci/////////////////////////
-x = prompt("¿Cuantos números quieres conocer de la Serie Fibonacci?");
-
-//__________________________________________________________________________
+x = prompt("¿Ingrese un número entero diferente de 1?");
+//_______________________________________________________________________________________
 
 
-///////////////////Validación de Caracteres////////////////////////
-while (parseInt(x) != x) {
+//////////////////VALIDACIÓN DE CARACTERES/////////////////////////////////
+
+while (parseInt(x) == 1 ) {
 x = prompt("!Digitación ERRONEA! Digite un numero entero");
 }
+//Un  número primo tiene que ser mayor a 1________________________________________________________________
 
-//Mientras que sea igual a un entero seguira compilando, si nunca va hacer un número entero mostrara mensaje de advertencia, Digitación Erronea________________________________________________________________
-
-
-//////////////////////////Impresión Por Pantalla/////////////////////////////////////
-
-document.write("La serie Fibonacci es: ");
-document.write (a+" - "); 
-document.write(b+" - "); 
-
-// Tanto Como a y b nunca van a cambiar en la serie, entonces se imprimen de una vez.
+while (parseInt(x) != x ) {
+x = prompt("!Digitación ERRONEA! Digite un numero entero");
+}
+//Validación letras y caracteres especiales____________________________________________________________________________
 
 
-/////////////////////////////METODO/////////////////////////////////////////////////////////////
+/////////////////////////////////////METODO/////////////////////////////////////////////////
+   
+    
+    if (x%2==0) {
+		contador++;
+
+    };
+
+ if (x%3==0) {
+		contador++;
+
+    };
+
+ if (x%5==0) {
+		contador++;
+
+    };
 
 
-		for(i=3;i<=x;i++){ 
-		c=a+b;
- 		a=b; 
- 		b=c; 
- 		document.write(c+" - ");
-		}
+ if (x==2) {
+		contador--;
 
-//_____________________________________________________________
+    };
+
+ if (x==3) {
+		contador--;
+
+    };   
+
+if (x==5) {
+		contador--;
+
+    };
 
 
-</script>
+document.write("El número: "+x); //Impresión por pantalla
 
+ 
+
+if (contador<=2) {
+
+	document.write("!SI! es primo."); //Si el contador es igual o menor a 2 decimos qu es un número primo.
+};
+
+if (contador>=3) {
+
+	document.write("!NO! es primo.") //Si el contador es mayor a 2 NO es un número primo.
+};
+  
+
+//Final del Scrip</script>
 
 </head>
+
+
+
 
 
 
@@ -108,7 +134,7 @@ document.write(b+" - ");
 
 
 
- <!--///////////////////////////////////////////////////////////////////////////////////////////--> 
+ <!--////////////////////////////CUERPO DE LA PAGINA////////////////////////////////////////////////////--> 
  	
  	<!--DESCRIPCIÓN-->
 
@@ -116,9 +142,9 @@ document.write(b+" - ");
 <DIV Align="Center" > <font Color="Red"><h2><U>Descripción</u></h2></font>
 
 
-	<h2>Este programa muestra la Serie Fibonacci, si el usuario desea conocer cual es la sucesion de números hasta la posición x, la puede saber con este programa.</h2> <P>
+	<h2>Programa que arroja como resultado si un número es primo o no.</h2> <P>
 
-	<A HREF="file:///D:/Desktop/FinalFibo.html"><h3>Again</h3> </A> <P>
+	<A HREF="file:///D:/Desktop/Numeros%20Primos.html"><h3>Again</h3> </A> <P>
 
 
 	<IMG SRC="http://4.bp.blogspot.com/-Iabr5ZVnDWg/UEpBp_IL4SI/AAAAAAAACyY/QCRiDZL4dMA/s1600/188129_68060389128_7270375_n.jpg">
